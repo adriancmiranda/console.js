@@ -1,0 +1,4 @@
+console.js
+==========
+
+AS trace
