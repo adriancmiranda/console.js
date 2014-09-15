@@ -7,7 +7,7 @@
     
     (function (console) {
         var ctor = function () {};
-        for (var methods='assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,timeStamp,profile,profileEnd,time,timeEnd,trace,warn'.split(','), method; method = methods.pop();) {
+        for (var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,timeStamp,profile,profileEnd,time,timeEnd,trace,warn'.split(','), method; method = methods.pop();) {
             console[method] = console[method] || ctor;
         }
     }(function () {
