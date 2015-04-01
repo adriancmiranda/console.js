@@ -6,12 +6,11 @@
 
     if (typeof module === "object" && typeof module.exports === "object") {
         // For CommonJS and CommonJS-like environments where a proper window is present,
-        // execute the factory and get jQuery
+        // execute the factory and get trace
         // For environments that do not inherently posses a window with a document
-        // (such as Node.js), expose a jQuery-making factory as module.exports
+        // (such as Node.js), expose a trace-making factory as module.exports
         // This accentuates the need for the creation of a real window
-        // e.g. var jQuery = require("jquery")(window);
-        // See ticket #14549 for more info
+        // e.g. var trace = require("trace")(window);
         module.exports = global.document ?
             factory(global, true) :
             function(w) {
