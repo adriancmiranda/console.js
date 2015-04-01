@@ -19,7 +19,7 @@
         }
     }()));
 
-    window.trace = function () {
+    var trace = function () {
         trace.history = trace.history || [];
         trace.history.push(arguments);
         if (window.console) {
@@ -31,4 +31,16 @@
             }
         }
     };
+    
+    // transport
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(trace);
+    } else if (typeof exports === 'object') {
+        // CommonJS
+        module.exports = trace;
+    } else {
+        // browser global
+        window.trace = trace;
+    }
 }(this));
