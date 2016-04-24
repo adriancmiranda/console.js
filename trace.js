@@ -1,7 +1,7 @@
 /**
-* @author Adrian C. Miranda <adriancmiranda@gmail.com>
-* @see https://github.com/adriancmiranda/console.js
-*/
+ * @author Adrian C. Miranda <adriancmiranda@gmail.com>
+ * @see https://github.com/adriancmiranda/console.js
+ */
 (function(global, factory){
 	'use strict';
 
@@ -15,32 +15,33 @@
 	'use strict';
 
 	(function(console){
-		var type = {};
+		var slice = Array.prototype.slice;
 		var ctor = function(){};
 		for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
 			(function(logger, method){
 				console[method] = function(){
-					var params = Array.prototype.slice.call(arguments);
-					if(typeof type[method] === 'undefined'){
-						type[method] = [params];
-					}else{
-						type[method].push(params);
+					var params = slice.call(arguments);
+					if(console.history.length >= console.scrollback){
+						console.history.shift();
 					}
-					console.history.push(type);
+					console.history.push({ type:method, value:params });
 					return logger.apply(console, params);
 				};
 			}).call(console, console[method] || ctor, method);
 		}
-	}(function(){
+	}(function(limit){
 		try{
 			console.log();
 			window.console.history = [];
+			window.console.scrollback = limit;
 			return window.console;
 		}catch(error){
-			window.console = { history:[] };
+			window.console = { history:[], scrollback:limit };
 			return window.console;
 		}
-	}()));
+	}(window.console && typeof window.console.scrollback === 'number'?
+		window.console.scrollback : 10
+	)));
 
 	return console.log;
 }));
