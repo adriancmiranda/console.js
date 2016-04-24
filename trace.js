@@ -24,7 +24,7 @@
 					if(console.history.length >= console.scrollback){
 						console.history.shift();
 					}
-					console.history.push({ type:method, value:params });
+					console.history.push({ type:method, message:params });
 					return logger.apply(console, params);
 				};
 			}).call(console, console[method] || ctor, method);
