@@ -7,7 +7,7 @@
     "trace",
     "component"
   ],
-  "main": "trace.js",
+  "main": ["trace.js", "trace.min.js"],
   "scripts": [
     "trace.js"
   ],
