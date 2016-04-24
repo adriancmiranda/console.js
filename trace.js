@@ -1,6 +1,7 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/console.js
+ * @version 1.0.3
  */
 (function(global, factory){
 	'use strict';
