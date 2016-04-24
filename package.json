@@ -1,7 +1,7 @@
 {
   "name": "console.js",
   "description": "trace component",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/adriancmiranda/console.js.git"
