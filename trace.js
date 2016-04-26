@@ -24,7 +24,7 @@
 		for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
 			(function(logger, method){
 				console[method] = function(){
-					if(console.force){
+					if(console.enabled){
 						var params = slice.call(arguments);
 						if(console.history.length >= console.scrollback){
 							console.history.shift();
