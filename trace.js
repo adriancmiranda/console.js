@@ -14,6 +14,12 @@
 
 }(typeof window !== 'undefined' ? window : this, function(window, nodeEnv){
 	'use strict';
+	
+	var qs = function(field){
+		var re = new RegExp('[?&]'+ field +'=([^&#]*)', 'i');
+		var string = re.exec(window.location.href);
+		return string? string[1] : null;
+	};
 
 	(function(console){
 		var slice = Array.prototype.slice;
