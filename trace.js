@@ -1,7 +1,7 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/console.js
- * @version 1.0.3
+ * @version 1.0.4
  */
 (function(global, factory){
 	'use strict';
@@ -14,25 +14,24 @@
 
 }(typeof window !== 'undefined' ? window : this, function(window, nodeEnv){
 	'use strict';
-	
-	var qs = function(field){
-		var re = new RegExp('[?&]'+ field +'=([^&#]*)', 'i');
-		var string = re.exec(window.location.href);
-		return string? string[1] : null;
-	};
+
+	var debug = /\bdebug\b/.test(window.location.href);
 
 	(function(console){
+		window.console.enabled = window.console.enabled || debug;
 		var slice = Array.prototype.slice;
 		var ctor = function(){};
 		for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
 			(function(logger, method){
 				console[method] = function(){
-					var params = slice.call(arguments);
-					if(console.history.length >= console.scrollback){
-						console.history.shift();
+					if(console.force){
+						var params = slice.call(arguments);
+						if(console.history.length >= console.scrollback){
+							console.history.shift();
+						}
+						console.history.push({ type:method, message:params });
+						return logger.apply(console, params);
 					}
-					console.history.push({ type:method, message:params });
-					return logger.apply(console, params);
 				};
 			}).call(console, console[method] || ctor, method);
 		}
