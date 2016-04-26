@@ -18,7 +18,7 @@
 	var debug = /\bdebug\b/.test(window.location.href);
 
 	(function(console){
-		window.console.enabled = window.console.enabled || debug;
+		console.enabled = debug || console.enabled;
 		var slice = Array.prototype.slice;
 		var ctor = function(){};
 		for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
