@@ -11,7 +11,7 @@ bower install --save-dev console=adriancmiranda/console.js
 
 ## Usage
 
-Put debug word in your url to show your logs
+Put `debug` word in your url to show your logs
 
 `P.S.` you can also usage the trace method (flash feelings ^^)
 
