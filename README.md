@@ -9,6 +9,12 @@ AS trace
 bower install --save-dev console=adriancmiranda/console.js
 ```
 
+## Usage
+
+Put debug word in your url to show your logs
+
+`P.S.` you can also usage the trace method (flash feelings ^^)
+
 ## CDN
 Use this URL for dev/testing
 
@@ -21,9 +27,3 @@ Use this URL in production
 ```javascript
 <script src="https://cdn.rawgit.com/adriancmiranda/console.js/master/trace.min.js"></script>
 ```
-
-## Usage
-
-Put debug word in your url to show your logs
-
-`P.S.` you can also usage the trace method (flash feelings ^^)
