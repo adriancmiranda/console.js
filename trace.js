@@ -36,6 +36,7 @@
     for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
       trace(console, console[method] || ctor, method);
     }
+    return console;
   }
 
   return Logger(function(limit){
