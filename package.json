@@ -2,9 +2,47 @@
   "name": "console.js",
   "description": "trace component",
   "version": "1.0.5",
+  "licenses": "MIT",
+  "spm": {
+    "main": "trace.js"
+  },
+  "devDependencies":{
+    "uglify-js": "2.6.2",
+    "eslint": "2.11.1",
+    "jshint": "2.9.2",
+    "should": "9.0.0",
+    "mocha": "2.5.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adriancmiranda/console.js.git"
+  },
+  "scripts": {
+    "start": "npm cache clean && npm i && npm run watch",
+    "postinstall": "npm run build",
+    "eslint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
+    "jshint": "jshint ./ --exclude ./trace.min.js,**/node_modules/**",
+    "mocha": "mocha tests",
+    "prebuild": "npm run eslint && npm run jshint && npm run mocha",
+    "build": "uglifyjs -c -v trace.js -o trace.min.js",
+    "watch": "npm run mocha -- -w"
+  },
+  "eslintConfig": {},
+  "jshintConfig": {
+    "indent": 2,
+    "browser": true,
+    "node": true,
+    "maxerr": 999,
+    "camelcase": true,
+    "curly": false,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": false,
+    "noarg": true,
+    "undef": true,
+    "strict": true,
+    "expr": true
   },
   "keywords": [
     "trace",
@@ -12,14 +50,5 @@
     "javascript",
     "browser",
     "library"
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/adriancmiranda/console.js/blob/master/MIT-LICENSE.txt"
-    }
-  ],
-  "spm": {
-    "main": "trace.js"
-  }
+  ]
 }
