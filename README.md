@@ -11,9 +11,9 @@ bower install --save-dev console=adriancmiranda/console.js
 
 ## Usage
 
-Put `debug` word in your url to show your logs
+Put `debug` word in your url to show your logs or set `console.enabled = true;`
 
-`P.S.` you can also usage the trace method (flash feelings ^^)
+`P.S.` you can also usage the trace method (flash feelings)
 
 ## CDN
 Use this URL for dev/testing
