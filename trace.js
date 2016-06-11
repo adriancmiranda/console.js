@@ -18,43 +18,10 @@
   var debug = !nodeEnv && /\bdebug\b/.test(global.location.href);
   var slice = Array.prototype.slice;
 
-  function isDefined(value){
-    return typeof value !== 'undefined';
-  }
-
-  function backtrace(opts){
-  }
-
-  function getNativeStackTrace(error){
-    return error.stack || error['opera#sourceloc'];
-  }
-
-  function parseStackTrace(opts, error){
-    if(isDefined(error.stacktrace) || isDefined(error['opera#sourceloc'])){
-    }else if(error.stack){
-    }
-  }
-
-  function getStackTrace(){
-    try{
-      throw new Error();
-    }catch(error){
-      if(getNativeStackTrace(error)){
-        return parseStackTrace(opts, error);
-      }
-      return backtrace(opts);
-    }
-  }
-
-  function getMethodNameByIndex(index){
-    return '';
-  }
-
   function trace(console, outputFn, method){
     console[method] = function(){
       if(!console.enabled) return void(0);
-      var prefix = getMethodNameByIndex(-1);
-      var args = [prefix? prefix+':' : prefix].concat(slice.call(arguments));
+      var args = slice.call(arguments);
       if(console.history.length >= console.scrollback){
         console.history.shift();
       }
@@ -67,7 +34,7 @@
     var ctor = function(){};
     console.enabled = debug || console.enabled;
     for(var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(','), method; method = methods.pop();){
-      trace.call(console, console, console[method] || ctor, method);
+      trace(console, console[method] || ctor, method);
     }
   }
 
