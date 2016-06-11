@@ -15,7 +15,7 @@
 }(typeof window !== 'undefined' ? window : this, function(global, nodeEnv){
   'use strict';
 
-  var debug = !nodeEnv && /\bdebug\b/.test(global.location.href);
+  var debug = !nodeEnv && /\bdebug\b/i.test(global.location.href);
   var slice = Array.prototype.slice;
 
   function trace(console, outputFn, method){
