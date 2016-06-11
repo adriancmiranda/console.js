@@ -1,13 +1,14 @@
 {
   "name": "console.js",
   "description": "trace component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/adriancmiranda/console.js.git"
   },
   "keywords": [
     "trace",
+    "console",
     "javascript",
     "browser",
     "library"

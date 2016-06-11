@@ -1,13 +1,13 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/console.js
- * @version 1.1.0
+ * @version 1.0.5
  */
 (function(global, factory){
   'use strict';
 
   if(typeof module === 'object' && typeof module.exports === 'object'){
-    module.exports = factory(global, true);
+    module.exports = factory(global, true).log;
   }else{
     global.trace = factory(global).log;
   }
@@ -15,7 +15,7 @@
 }(typeof window !== 'undefined' ? window : this, function(global, nodeEnv){
   'use strict';
 
-  var debug = !nodeEnv && /\bdebug\b/i.test(global.location.href);
+  var debug = global.location && /\bdebug\b/i.test(global.location.href);
   var slice = Array.prototype.slice;
 
   function trace(console, outputFn, method){
