@@ -19,7 +19,7 @@
   var slice = Array.prototype.slice;
 
   function trace(console, method){
-    var outputFn = console[method];
+    var output = console[method];
     console[method] = function(){
       if(!console.enabled) return void(0);
       var args = slice.call(arguments);
@@ -27,7 +27,7 @@
         console.history.shift();
       }
       console.history.push({ type:method, message:args });
-      return outputFn && outputFn.apply(console, args);
+      return output && output.apply(console, args);
     };
   }
 
