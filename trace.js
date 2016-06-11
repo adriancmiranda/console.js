@@ -18,7 +18,7 @@
   var debug = global.location && /\bdebug\b/i.test(global.location.href);
   var slice = Array.prototype.slice;
 
-  function trace(console, method){
+  function wrap(console, method){
     var output = console[method];
     console[method] = function(){
       if(!console.enabled) return void(0);
@@ -35,7 +35,7 @@
     var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(',');
     console.enabled = debug || console.enabled;
     while(methods.length){
-      trace(console, methods.pop());
+      wrap(console, methods.pop());
     }
     return console;
   }
