@@ -30,6 +30,7 @@
   "eslintConfig": {},
   "jshintConfig": {
     "indent": 2,
+    "mocha": true,
     "browser": true,
     "node": true,
     "maxerr": 999,
