@@ -39,7 +39,7 @@
     return console;
   }
 
-  return Logger(function(limit){
+  function getConsole(limit){
     try{
       console.log();
       global.console.history = [];
@@ -49,7 +49,9 @@
       global.console = { history:[], scrollback:limit };
       return global.console;
     }
-  }(global.console && typeof global.console.scrollback === 'number'?
-    global.console.scrollback : 10
+  }
+
+  return Logger(getConsole(global.console && typeof global.console.scrollback === 'number'?
+    global.console.scrollback : 1
   ));
 }));
