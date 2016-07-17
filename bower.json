@@ -1,6 +1,6 @@
 {
   "name": "console.js",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "trace component",
   "main": ["trace.js", "trace.min.js"],
   "keywords": [
