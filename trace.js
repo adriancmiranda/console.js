@@ -38,11 +38,11 @@
     while(methods.length){
       wrap(console, methods.pop());
     }
-    console.add = function(message){
-      longMessage += message + '\n';
+    console.push = function(message){
+      longMessage += message +'\n';
     };
     console.flush = function(message){
-      trace(longMessage);
+      console.log(longMessage);
       longMessage = '';
     };
     return console;
