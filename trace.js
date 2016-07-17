@@ -1,13 +1,13 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/console.js
- * @version 1.0.5
+ * @version 1.0.6
  */
 (function(global, factory){
   'use strict';
 
   if(typeof module === 'object' && typeof module.exports === 'object'){
-    module.exports = factory(global, true).log;
+    global.trace = module.exports = factory(global, true).log;
   }else{
     global.trace = factory(global).log;
   }
@@ -32,11 +32,19 @@
   }
 
   function Logger(console){
+    var longMessage = '';
     var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(',');
     console.enabled = debug || console.enabled;
     while(methods.length){
       wrap(console, methods.pop());
     }
+    console.add = function(message){
+      longMessage += message + '\n';
+    };
+    console.flush = function(message){
+      trace(longMessage);
+      longMessage = '';
+    };
     return console;
   }
 
