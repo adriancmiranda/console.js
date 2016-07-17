@@ -32,18 +32,18 @@
   }
 
   function Logger(console){
-    var longMessage = '';
+    var list = [];
     var methods = 'assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,timeStamp,profile,profileEnd,time,timeEnd,trace,warn,log'.split(',');
     console.enabled = debug || console.enabled;
     while(methods.length){
       wrap(console, methods.pop());
     }
-    console.push = function(message){
-      longMessage += message +'\n';
+    console.push = function(){
+      list = list.concat(slice.call(arguments));
     };
-    console.flush = function(message){
-      console.log(longMessage);
-      longMessage = '';
+    console.flush = function(){
+      console.log(list.join('\n'));
+      list = [];
     };
     return console;
   }
