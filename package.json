@@ -20,7 +20,6 @@
   },
   "scripts": {
     "start": "npm cache clean && npm i && npm run watch",
-    "postinstall": "npm run build",
     "eslint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
     "jshint": "jshint ./ --exclude ./trace.min.js,**/node_modules/**",
     "mocha": "mocha tests",
