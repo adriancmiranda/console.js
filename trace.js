@@ -12,7 +12,7 @@
     global.trace = factory(global).log;
   }
 
-}(typeof window !== 'undefined' ? window : this, function(global, nodeEnv){
+}(typeof window !== 'undefined'? window : this, function(global, nodeEnv){
   'use strict';
 
   var debug = global.location && /\bdebug\b/i.test(global.location.href);
