@@ -53,11 +53,10 @@
       console.log();
       global.console.history = [];
       global.console.scrollback = limit;
-      return global.console;
     }catch(error){
       global.console = { history:[], scrollback:limit };
-      return global.console;
     }
+    return global.console;
   }
 
   return Logger(getConsole(global.console && typeof global.console.scrollback === 'number'?
