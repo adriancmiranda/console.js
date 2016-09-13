@@ -1,7 +1,7 @@
 {
 	"name": "adriancmiranda/console.js",
 	"description": "trace component",
-	"version": "1.0.6",
+	"version": "1.0.8",
 	"type": "component",
 	"license": "MIT",
 	"support": {

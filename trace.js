@@ -1,7 +1,7 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/console.js
- * @version 1.0.6
+ * @version 1.0.8
  */
 (function(global, factory){
   'use strict';
@@ -27,7 +27,7 @@
         console.history.shift();
       }
       console.history.push({ type:method, message:args });
-      return output && output.apply(console, args);
+      return output && output.apply && output.apply(console, args);
     };
   }
 
