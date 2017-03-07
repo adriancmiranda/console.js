@@ -1,6 +1,6 @@
 {
-  "name": "console.js",
-  "repo": "adriancmiranda/console.js",
+  "name": "trace",
+  "repo": "adriancmiranda/trace",
   "version": "1.0.8",
   "description": "trace component",
   "keywords": [
