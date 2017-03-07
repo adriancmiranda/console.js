@@ -1,6 +1,6 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
- * @see https://github.com/adriancmiranda/console.js
+ * @see https://github.com/adriancmiranda/trace
  * @version 1.0.8
  */
 (function(global, factory){
