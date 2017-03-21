@@ -3,9 +3,7 @@
   "description": "trace component",
   "version": "1.0.8",
   "licenses": "MIT",
-  "spm": {
-    "main": "trace.js"
-  },
+  "main": "trace.js",
   "devDependencies": {
     "eslint": "2.11.1",
     "jshint": "2.9.2",
