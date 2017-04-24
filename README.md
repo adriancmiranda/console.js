@@ -32,9 +32,9 @@ Use this URL in production
 
 ## Usage
 
-Put `debug` word in your url (e.g. `<url>?debug`) to show your logs or set `console.enabled = true;` in your `JavaScript` code
+Join `debug` word in URL (e.g. `<url>?debug`)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the console normally.
 
-`P.S.` you can also usage the trace method (flash feelings :sunglasses:)
+`P.S.` you can also usage the trace method as an alias to `console.log` (flash feelings :sunglasses:)
 
 ### parameters
 
