@@ -10,13 +10,13 @@ trace
 
 ## How to install __console.js__ in your project
 
-### Bower
+### bower
 
 ```bash
 bower install --save-dev adriancmiranda/trace
 ```
 
-### CDN
+### cdn
 
 Use this URL for dev/testing
 
@@ -36,18 +36,23 @@ Put `debug` word in your url (i.e. `<url>?debug`) to show your logs or set `cons
 
 `P.S.` you can also usage the trace method (flash feelings :sunglasses:)
 
-### Parameters
+### parameters
 
 `... arguments` — One or more (comma separated) expressions to evaluate. For multiple expressions, a space is inserted between each expression in the output.
 
 
-### Example
+### example
 
 The following example uses the trace() method to print a simple string. Generally, the message will be printed to a "Developer Tools > Console".
 
 ```javascript
 trace("Hello", "World");
 ```
+
+## License
+
+[MIT][license-url]
+
 
 <!-- links -->
 
