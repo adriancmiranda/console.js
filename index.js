@@ -1,7 +1,7 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/trace
- * @version 1.0.8
+ * @version 1.0.10
  */
 (function(global, factory){
   'use strict';
