@@ -34,7 +34,7 @@ Use this URL in production
 
 Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the console normally.
 
-`P.S.` you can also usage the trace method as an alias to `console.log` (flash feelings :sunglasses:)
+`P.S.` you can also usage the `trace` method as an alias to `console.log` (flash feelings :sunglasses:)
 
 ### parameters
 
@@ -43,7 +43,7 @@ Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `conso
 
 ### example
 
-The following example uses the trace() method to print a simple string. Generally, the message will be printed to a "Developer Tools > Console".
+The following example uses the `trace()` method to print a simple string. Generally, the message will be printed to a "Developer Tools > Console".
 
 ```javascript
 trace("Hello", "World");
