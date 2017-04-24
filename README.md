@@ -8,7 +8,7 @@ trace
 [![travis][travis]][travis-url]
 [![appveyor][appveyor]][appveyor-url]
 
-## How to install __console.js__ in your project
+## How to install __trace__ in your project
 
 ### bower
 
