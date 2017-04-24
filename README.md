@@ -11,7 +11,7 @@ bower install --save-dev trace=adriancmiranda/trace
 
 ## Usage
 
-Put `debug` word in your url to show your logs or set `console.enabled = true;`
+Put `debug` word in your url (i.e. `<url>?debug`) to show your logs or set `console.enabled = true;`
 
 `P.S.` you can also usage the trace method (flash feelings)
 
