@@ -15,7 +15,8 @@
 }(typeof window !== 'undefined'? window : this, function(global, nodeEnv){
   'use strict';
 
-  var debug = global.location && /\bdebug\b/i.test(global.location.href);
+  var href = nodeEnv ? global.url.href : (global.location !== global.parent.location ? document.referrer : document.location.href);
+  var debug = /\bdebug\b/i.test(href);
   var slice = Array.prototype.slice;
 
   function wrap(console, method){
