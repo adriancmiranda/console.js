@@ -1,47 +1,54 @@
 {
   "name": "trace",
-  "description": "trace component",
+  "author": "Adrian C. Miranda",
+  "description": "Displays expressions, or writes to log files, while debugging.",
   "version": "1.0.10",
   "licenses": "MIT",
-  "main": "trace.js",
+  "main": "index.js",
+  "browser": "index.js",
+  "module": "index",
+  "homepage": "https://github.com/adriancmiranda/trace",
+  "readmeFilename": "README.md",
+  "license": "MIT",
   "devDependencies": {
-    "eslint": "2.11.1",
-    "jshint": "2.9.2",
-    "mocha": "2.5.3",
-    "should": "9.0.0",
-    "sinon": "1.17.4",
-    "uglify-js": "2.6.2"
+    "chai": "~3.5.0",
+    "conventional-commit-types": "~2.1.0",
+    "eslint": "~3.19.0",
+    "eslint-config-airbnb-base": "~11.1.3",
+    "eslint-plugin-import": "~2.2.0",
+    "husky": "~0.13.3",
+    "mocha": "~3.3.0",
+    "npm-run-all": "~4.0.2",
+    "should": "~11.2.1",
+    "sinon": "~2.1.0",
+    "sinon-chai": "~2.9.0",
+    "standard-version": "~4.0.0",
+    "uglify-js": "~2.8.22"
+  },
+  "scripts": {
+    "upgrade": "ncu -a --loglevel verbose --packageFile package.json && npm i",
+    "start": "npm cache clean && npm i && npm run watch",
+    "prebuild": "run-s eslint test",
+    "lint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
+    "test": "mocha -R spec test",
+    "test:watch": "run-s \"test -- -w\"",
+    "test:travis": "npm test",
+    "test:appveyor": "npm test",
+    "build": "uglifyjs -c -v trace.js -o trace.min.js",
+    "precommit": "run-s test",
+    "release": "standard-version"
+  },
+  "config": {
+    "validate-commit-msg": {
+      "types": "conventional-commit-types"
+    }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/adriancmiranda/trace.git"
   },
-  "scripts": {
-    "start": "npm cache clean && npm i && npm run watch",
-    "eslint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
-    "jshint": "jshint ./ --exclude ./trace.min.js,**/node_modules/**",
-    "mocha": "mocha tests",
-    "prebuild": "npm run eslint && npm run jshint && npm run mocha",
-    "build": "uglifyjs -c -v trace.js -o trace.min.js",
-    "watch": "npm run mocha -- -w"
-  },
-  "eslintConfig": {},
-  "jshintConfig": {
-    "indent": 2,
-    "mocha": true,
-    "browser": true,
-    "node": true,
-    "maxerr": 999,
-    "camelcase": true,
-    "curly": false,
-    "eqeqeq": true,
-    "immed": true,
-    "latedef": true,
-    "newcap": false,
-    "noarg": true,
-    "undef": true,
-    "strict": true,
-    "expr": true
+  "bugs": {
+    "url": "https://github.com/adriancmiranda/trace/issues"
   },
   "keywords": [
     "trace",
@@ -49,5 +56,10 @@
     "javascript",
     "browser",
     "library"
-  ]
+  ],
+  "greenkeeper": {
+    "ignore": [
+      "material"
+    ]
+  }
 }
