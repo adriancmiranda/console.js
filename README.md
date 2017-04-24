@@ -32,7 +32,7 @@ Use this URL in production
 
 ## Usage
 
-Put `debug` word in your url (i.e. `<url>?debug`) to show your logs or set `console.enabled = true;` in your `JavaScript` code
+Put `debug` word in your url (e.g. `<url>?debug`) to show your logs or set `console.enabled = true;` in your `JavaScript` code
 
 `P.S.` you can also usage the trace method (flash feelings :sunglasses:)
 
