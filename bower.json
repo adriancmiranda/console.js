@@ -1,6 +1,6 @@
 {
   "name": "trace",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "trace component",
   "main": ["trace.js", "trace.min.js"],
   "keywords": [
