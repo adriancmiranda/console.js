@@ -37,7 +37,7 @@ bower install --save-dev adriancmiranda/trace
 
 Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the [console](https://developer.mozilla.org/en/docs/Web/API/console) normally.
 
-`P.S.` you can also usage the `trace` method as an alias to [console.log](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) (flash feelings :sunglasses:)
+`P.S.` you can also usage the `trace` method as an alias to [console.log](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) (:zap: flash feelings :sunglasses:)
 
 ### **trace(...arguments):void**
 
