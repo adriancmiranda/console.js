@@ -54,7 +54,7 @@ trace("Hello", "World");
 A Boolean value that indicates whether the console is enabled.
 
 ### console.history:array
-_[read-only]_
+[read-only]
 
 ### console.scrollback:uint
 
