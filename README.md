@@ -39,7 +39,7 @@ Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `conso
 
 `P.S.` you can also usage the `trace` method as an alias to [console.log](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) (:zap: flash feelings :sunglasses:)
 
-### **trace(...arguments):void**
+### :black_circle: **trace(...arguments):void**
 
 #### parameters
 
