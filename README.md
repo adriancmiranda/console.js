@@ -36,18 +36,29 @@ Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `conso
 
 `P.S.` you can also usage the `trace` method as an alias to `console.log` (flash feelings :sunglasses:)
 
-### parameters
+### trace(...arguments):void
+
+#### parameters
 
 `... arguments` — One or more (comma separated) expressions to evaluate. For multiple expressions, a space is inserted between each expression in the output.
 
 
-### example
+#### example
 
 The following example uses the `trace()` method to print a simple string. Generally, the message will be printed to a "Developer Tools > Console".
 
 ```javascript
 trace("Hello", "World");
 ```
+### console.enabled:boolean
+
+### console.history:array (only read)
+
+### console.scrollback:uint
+
+### console.push(...arguments):void
+
+### console.flush():void
 
 ## License
 
