@@ -39,6 +39,7 @@
     "release": "standard-version"
   },
   "testling": {
+    "harness": "mocha-bdd",
     "files": "test/*.js",
     "browsers": [
       "ie/8..latest",
