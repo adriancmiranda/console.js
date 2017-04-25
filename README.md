@@ -48,7 +48,7 @@ Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `conso
 
 #### example
 
-The following example uses the `trace()` method to print a simple string. Generally, the message will be printed to a "Developer Tools > Console".
+The following example uses the `trace()` method to print a simple string. Generally, the message will be printed to a _`Developer Tools > Console`_.
 
 ```javascript
 trace("Hello", "World");
