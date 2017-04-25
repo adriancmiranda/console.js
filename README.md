@@ -32,7 +32,7 @@ Use this URL in production
 
 ## Usage
 
-Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the `console` normally.
+Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the [console](https://developer.mozilla.org/en/docs/Web/API/console) normally.
 
 `P.S.` you can also usage the `trace` method as an alias to `console.log` (flash feelings :sunglasses:)
 
