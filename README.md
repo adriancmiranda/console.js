@@ -18,17 +18,20 @@ bower install --save-dev adriancmiranda/trace
 
 ### cdn
 
-compressed
+
+#### uncompressed
+
+```javascript
+<script src="https://rawgit.com/adriancmiranda/trace/master/index.js"></script>
+```
+
+
+#### compressed
 
 ```javascript
 <script src="https://rawgit.com/adriancmiranda/trace/master/index.min.js"></script>
 ```
 
-uncompressed
-
-```javascript
-<script src="https://rawgit.com/adriancmiranda/trace/master/index.js"></script>
-```
 
 ## Usage
 
