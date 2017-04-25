@@ -51,8 +51,10 @@ The following example uses the `trace()` method to print a simple string. Genera
 trace("Hello", "World");
 ```
 ### console.enabled:boolean
+A Boolean value that indicates whether the console is enabled.
 
-### console.history:array (only read)
+### console.history:array
+_[read-only]_
 
 ### console.scrollback:uint
 
