@@ -30,7 +30,7 @@
     "start": "npm cache clean && npm i && npm run watch",
     "prebuild": "run-s eslint test",
     "lint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
-    "test": "mocha -R spec test",
+    "test": "mocha --ui bdd -R spec test",
     "test:watch": "run-s \"test -- -w\"",
     "test:travis": "npm test",
     "test:appveyor": "npm test",
