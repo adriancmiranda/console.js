@@ -1,11 +1,19 @@
 {
   "name": "trace",
   "version": "1.0.10",
+  "license": "MIT",
   "description": "trace component",
   "main": ["trace.js", "trace.min.js"],
   "keywords": [
     "trace",
     "component"
   ],
-  "license": "MIT"
+  "ignore": [
+    "material/",
+    "node_modules/",
+    "test/",
+    "**/.*",
+    "package.json",
+    "appveyor.yml"
+  ]
 }
