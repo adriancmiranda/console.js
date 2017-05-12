@@ -7,6 +7,7 @@ trace
 [![depsci][depsci]][depsci-url]
 [![travis][travis]][travis-url]
 [![appveyor][appveyor]][appveyor-url]
+[![circleci][circleci]][circleci-url]
 
 ## How to install __trace__ in your project
 
@@ -92,5 +93,8 @@ To clear the appended log with `console.push` method
 
 [appveyor]: https://ci.appveyor.com/api/projects/status/hucvow1n0t3q3le3/branch/master?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/adriancmiranda/trace/branch/master
+
+[circleci]: https://circleci.com/gh/adriancmiranda/trace/tree/master.svg?style=shield
+[circleci-url]:  https://circleci.com/gh/adriancmiranda/trace/tree/master
 
 [license-url]: https://github.com/adriancmiranda/trace/blob/master/LICENSE
