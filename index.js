@@ -7,8 +7,7 @@
 	'use strict';
 
 	if (typeof module === 'object' && typeof module.exports === 'object') {
-		global.url = global.url || {};
-		global.trace = module.exports = factory(global, true).log;
+		global.trace = module.exports = factory(global, !global.document).log;
 	} else {
 		global.trace = factory(global).log;
 	}
@@ -17,7 +16,7 @@
 	'use strict';
 
 	var slice = Array.prototype.slice;
-	var debug = /\bdebug\b/i.test(nodeEnv ? global.url.href : (
+	var debug = /\bdebug\b/i.test(nodeEnv ? Object(global.url).href : (
 		global.location !== global.parent.location ?
 		document.referrer :
 		document.location.href
