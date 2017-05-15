@@ -2,7 +2,7 @@
   "name": "trace",
   "author": "Adrian C. Miranda",
   "description": "Displays expressions, or writes to log files, while debugging.",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "licenses": "MIT",
   "main": "index.js",
   "browser": "index.js",
