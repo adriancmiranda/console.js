@@ -3,7 +3,7 @@
  * @see https://github.com/adriancmiranda/trace
  * @version 1.0.11
  */
-(function(global, factory){
+(function (global, factory) {
 	'use strict';
 
 	if (typeof module === 'object' && typeof module.exports === 'object') {

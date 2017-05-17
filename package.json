@@ -26,15 +26,15 @@
     "uglify-js": "~2.8.22"
   },
   "scripts": {
-    "upgrade": "ncu -a --loglevel verbose --packageFile package.json && npm i",
+    "update": "ncu -a --loglevel verbose --packageFile package.json && npm i",
     "start": "npm cache clean && npm i && npm run watch",
-    "prebuild": "run-s eslint test",
-    "lint": "eslint ./ --ignore-pattern \"trace.min.js\" --ignore-pattern \"**/node_modules/**\"",
+    "prebuild": "run-s lint test",
+    "lint": "eslint ./ --ignore-pattern \"index.min.js\" --ignore-pattern \"**/node_modules/**\"",
     "test": "mocha --ui bdd -R spec test",
     "test:watch": "run-s \"test -- -w\"",
     "test:travis": "npm test",
     "test:appveyor": "npm test",
-    "build": "uglifyjs -c -v trace.js -o trace.min.js",
+    "build": "uglifyjs -c -v index.js -o index.min.js",
     "precommit": "run-s test",
     "release": "standard-version"
   },
