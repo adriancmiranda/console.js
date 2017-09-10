@@ -4,20 +4,16 @@
  * @version 1.0.11
  */
 (function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? (module.exports = factory()) :
+	typeof define === 'function' && define.amd ? define(factory) : factory();
+}(this, (function () { 'use strict';
 	'use strict';
 
-	if (typeof module === 'object' && typeof module.exports === 'object') {
-		global.trace = module.exports = factory(global, !global.document).log;
-	} else {
-		global.trace = factory(global).log;
-	}
-
-}(typeof window !== 'undefined' ? window : this, function (global, nodeEnv) {
-	'use strict';
-
+	var nodeEnv = typeof window === 'undefined';
+	var scope = nodeEnv ? global : window;
 	var slice = Array.prototype.slice;
-	var debug = /\bdebug\b/i.test(nodeEnv ? Object(global.url).href : (
-		global.location !== global.parent.location ?
+	var debug = /\bdebug\b/i.test(nodeEnv ? Object(scope.url).href : (
+		scope.location !== scope.parent.location ?
 		document.referrer :
 		document.location.href
 	));
@@ -59,15 +55,17 @@
 	function getConsole(limit) {
 		try {
 			console.log();
-			global.console.history = [];
-			global.console.scrollback = limit;
+			scope.console.history = [];
+			scope.console.scrollback = limit;
 		} catch (err) {
-			global.console = { history: [], scrollback: limit };
+			scope.console = { history: [], scrollback: limit };
 		}
-		return global.console;
+		return scope.console;
 	}
 
-	return Logger(getConsole(global.console && typeof global.console.scrollback === 'number' ?
-		global.console.scrollback : 1
-	));
-}));
+	scope.trace = Logger(getConsole(scope.console && typeof scope.console.scrollback === 'number' ?
+		scope.console.scrollback : 1
+	)).log;
+
+	return scope.trace;
+})));
