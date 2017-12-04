@@ -8,6 +8,8 @@ trace
 [![travis][travis]][travis-url]
 [![appveyor][appveyor]][appveyor-url]
 [![circleci][circleci]][circleci-url]
+[![codacy][codacy]][codacy-url]
+
 
 ## How to install __trace__ in your project
 
@@ -96,5 +98,8 @@ To clear the appended log with `console.push` method
 
 [circleci]: https://circleci.com/gh/adriancmiranda/trace/tree/master.svg?style=shield
 [circleci-url]:  https://circleci.com/gh/adriancmiranda/trace/tree/master
+
+[codacy]: https://api.codacy.com/project/badge/Grade/ac6b06afbcc14abd8ea55356adc45cd7
+[codacy-url]: https://www.codacy.com/app/adriancmiranda/trace?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adriancmiranda/trace&amp;utm_campaign=Badge_Grade
 
 [license-url]: https://github.com/adriancmiranda/trace/blob/master/LICENSE
