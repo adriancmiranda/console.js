@@ -33,11 +33,11 @@
 
 	function Logger(console) {
 		var list = [];
-		var methods = [
-			'table,assert,count,debug,dir,dirxml,error,profile',
-			'group,groupCollapsed,groupEnd,info,timeStamp,log',
+		var methods = (
+			'table,assert,count,debug,dir,dirxml,error,profile'+
+			'group,groupCollapsed,groupEnd,info,timeStamp,log'+
 			'exception,profileEnd,time,timeEnd,trace,warn'
-		].join(',').split(',');
+		).split(',');
 		console.enabled = debug || console.enabled;
 		while (methods.length) {
 			wrap(console, methods.pop());
