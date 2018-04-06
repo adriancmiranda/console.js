@@ -66,6 +66,9 @@
 	scope.trace = Logger(getConsole(scope.console && typeof scope.console.scrollback === 'number' ?
 		scope.console.scrollback : 1
 	)).log;
-
-	return scope.trace;
+	
+	scope.Logger = Logger;
+	scope.getConsole = getConsole;
+	scope.wrap = wrap;
+	return scope;
 })));
