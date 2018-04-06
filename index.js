@@ -26,7 +26,7 @@
 			if (console.history.length >= console.scrollback) {
 				console.history.shift();
 			}
-			console.history.push({ type: method, message: args });
+			console.history[console.history.length] = { type: method, message: args };
 			return output && output.apply && output.apply(console, args);
 		};
 	}
