@@ -8,8 +8,8 @@
 	typeof define === 'function' && define.amd ? define(factory) : factory();
 }(this, (function () { 'use strict';
 	'use strict';
-
-	var nodeEnv = typeof window === 'undefined';
+	
+	var nodeEnv = new Function('try{return this===global;}catch(err){return false;}')();
 	var scope = nodeEnv ? global : window;
 	var slice = Array.prototype.slice;
 	var debug = /\bdebug\b/i.test(nodeEnv ? Object(scope.url).href : (
