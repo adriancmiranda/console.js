@@ -34,8 +34,8 @@
 	function Logger(console) {
 		var list = [];
 		var methods = (
-			'table,assert,count,debug,dir,dirxml,error,profile'+
-			'group,groupCollapsed,groupEnd,info,timeStamp,log'+
+			'table,assert,count,debug,dir,dirxml,error,profile,'+
+			'group,groupCollapsed,groupEnd,info,timeStamp,log,'+
 			'exception,profileEnd,time,timeEnd,trace,warn'
 		).split(',');
 		console.enabled = debug || console.enabled;
