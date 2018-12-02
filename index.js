@@ -1,7 +1,7 @@
 /**
  * @author Adrian C. Miranda <adriancmiranda@gmail.com>
  * @see https://github.com/adriancmiranda/trace
- * @version 1.0.11
+ * @version 2.0.0
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? (module.exports = factory()) :
@@ -22,7 +22,7 @@
 		scope.location !== scope.parent.location ?
 		document.referrer :
 		document.location.href
-	).split('?')[1]).debug);
+	).split('?')[1] || '').debug);
 
 	function isString(value) {
 		return typeof value === 'string' || value instanceof String;
@@ -34,6 +34,7 @@
 
 	function qs(search) {
 		var hash = {};
+		search = isString(search) ? search : '';
 		search.replace(reQS, function ($0, $1, $2) {
 			hash[$1] = $2;
 		});
@@ -116,13 +117,5 @@
 		scope.console.scrollback : 1
 	)).log;
 
-	scope.Logger = Logger;
-	scope.getConsole = getConsole;
-	scope.wrap = wrap;
-	scope.isString = isString;
-	scope.isNumber = isNumber;
-	scope.exists = exists;
-	scope.filter = filter;
-	scope.qs = qs;
 	return scope;
 })));

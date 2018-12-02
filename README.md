@@ -38,11 +38,11 @@ bower install --save-dev adriancmiranda/trace
 
 ## Usage
 
-Join `debug` word in URL (e.g. `<url>?debug`, `<url>/debug`, ...)  or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the [console](https://developer.mozilla.org/en/docs/Web/API/console) normally.
+Join `debug` query in URL (e.g. `<url>?debug=*`) or set `console.enabled = true;`  in your `JavaScript` code to show your logs and then use the [console](https://developer.mozilla.org/en/docs/Web/API/console) normally.
 
 `P.S.` you can also usage the `trace` method as an alias to [console.log](https://developer.mozilla.org/en-US/docs/Web/API/Console/log) (:zap: flash feelings :sunglasses:)
 
-### :black_circle: **trace(...arguments):void**
+### ⚫️ **trace(...arguments):void**
 
 #### parameters
 
@@ -56,23 +56,23 @@ The following example uses the `trace()` method to print a simple string. Genera
 ```javascript
 trace("Hello", "World");
 ```
-### :black_circle: **console.enabled:boolean**
+### ⚫️ **console.enabled:boolean**
 A Boolean value that indicates whether the console is enabled.
 
-### :black_circle: **console.history:array**
+### ⚫️ **console.history:array**
 [read-only] Contents of the history stack
 
-### :black_circle: **console.scrollback:uint**
+### ⚫️ **console.scrollback:uint**
 
 The number of lines of scrollback buffer to keep above the visible part of the screen.
 
-### :black_circle: **console.push(...arguments):void**
+### ⚫️ **console.push(...arguments):void**
 
 #### parameters
 
 `... arguments` — One or more (comma separated) expressions to evaluate. For multiple expressions, a space is inserted between each expression in the output.
 
-### :black_circle: **console.flush():void**
+### ⚫️ **console.flush():void**
 
 To clear the appended log with `console.push` method
 
